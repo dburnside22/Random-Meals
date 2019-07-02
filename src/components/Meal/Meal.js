@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
 import './Meal.scss';
 import { Link } from "react-router-dom";
-import {withRouter} from 'react-router-dom';
-import { thisExpression } from '@babel/types';
 
 
 export class Meal extends Component {
