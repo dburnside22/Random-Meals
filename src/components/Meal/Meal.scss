@@ -11,3 +11,20 @@
 .directions, .ingredents {
     padding: 0 10px;
 }
+
+@media only screen and (min-width: 700px){
+    .meal-layout {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        .meal-image {
+            height: 290px;
+        }
+    }
+
+    .directions {
+        grid-column: 1 / 3;
+    }
+
+    
+}

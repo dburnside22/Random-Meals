@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export class Recipes extends Component {
     componentDidMount() {
-        if (this.props.meals.length == 0){
+        if (this.props.meals.length === 0){
             let meals = [];
             for( let i = 0; i < 5; i++){
                 axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
@@ -33,7 +33,7 @@ export class Recipes extends Component {
                 return (
                     <div key={meal.idMeal} className='meal-item'>
                         <h3 className='meal-header'><Link to={'/' + meal.idMeal}>{meal.strMeal}</Link></h3>
-                        <img className='meal-image' src={meal.strMealThumb} />
+                        <img className='meal-image' src={meal.strMealThumb} alt={meal.strMeal} />
                     </div>
                 )
             })

@@ -35,9 +35,9 @@ export class Meal extends Component {
         const directions = <div className='directions'>{this.state.meal.strInstructions}</div>;
 
         const mealInfo = this.state.meal.strMeal ?  (
-            <h3 className="meal-header-detail">{this.state.meal.strMeal}</h3>
+            <span className="meal-header-detail">{this.state.meal.strMeal}</span>
         ) : (
-          <h3>No Meal Found</h3>
+          <span>No Meal Found</span>
         );
 
         return (
@@ -46,11 +46,21 @@ export class Meal extends Component {
                     <button className="back-button"><Link to={'/'}><FontAwesomeIcon icon={faArrowLeft} /></Link></button>
                     <button className="heart-button"><FontAwesomeIcon icon={faHeart} /></button>
                 </div>
-                <img className='meal-image' src={this.state.meal.strMealThumb} />
-                {mealInfo}
-                {ingredents}
-                <h3>Directions</h3>
-                {directions}
+                <div className='meal-layout'>
+                    <div>
+                        <img className='meal-image' src={this.state.meal.strMealThumb} alt={this.state.meal.strMeal}/>
+                        <h2>{mealInfo}</h2>
+                    </div>    
+                    <div>
+                        <h3>Ingredients</h3>
+                        {ingredents}
+                    </div>
+                    <div className="directions">
+                        <h3>Directions</h3>
+                        {directions}
+                    </div>    
+                </div>
+                
             </div>
         )
     }

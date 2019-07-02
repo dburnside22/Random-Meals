@@ -15,7 +15,6 @@ const initialState = {
 function reducer(state = initialState, action) {
     switch (action.type){
         case "CHANGERANDOMMEALS":
-            console.log('meals', action.payload.meals);
             return {
                 meals: action.payload.meals
             };
