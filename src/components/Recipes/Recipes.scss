@@ -21,3 +21,14 @@ a:hover {
     color: gray;
     text-decoration: underline;
 }
+
+@media only screen and (min-width: 700px){
+    .meals-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .meal-item {
+        margin: 10px;
+    }
+}
